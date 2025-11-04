@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { App } from './app';
 import { PrimerComponent } from '../primercomponent/primer.component';
+import { HooksAngular } from '../hooksangular/hooksangular.component';
 
 @NgModule({
   declarations: [
     App,
-    PrimerComponent
+    PrimerComponent,
+    HooksAngular
   ],
   imports: [
     BrowserModule
