@@ -1,29 +1,32 @@
 <div>
     <h1>Tabla multiplicar</h1>
-    <hr/>
     <form tablaForm="ngForm">
         <h2>Introduce el número a multiplicar</h2>
         <label>Numero</label>
         <input type="number" name="cajaNum" #cajaNum/>
         <button (click)="multiplicar()">Multiplicar</button>
     </form>
+    <div><br/></div>
     <div>
-        <table>
-            <thead>
-                <tr>
-                    <th>Operacion</th>
-                    <th>Resultado</th>
-                </tr>
-            </thead>
-            <tbody>
-                @for (resultado of resultados; track resultado; let i = $index)
-                {
+        @if(resultados.length > 0)
+        {
+            <table border="5">
+                <thead>
                     <tr>
-                        <td>{{cajaNum.value}} * {{$index+1}} = </td>
-                        <td>{{resultado}}</td>
+                        <th>Operacion</th>
+                        <th>Resultado</th>
                     </tr>
-                }
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @for (resultado of resultados; track resultado; let i = $index)
+                    {
+                        <tr>
+                            <td>{{cajaNum.value}} * {{$index+1}} = </td>
+                            <td>{{resultado}}</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
     </div>
 </div>

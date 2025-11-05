@@ -10,7 +10,7 @@ import { ViewChild, ElementRef } from '@angular/core';
 })
 export class TablamultiplicarComponent 
 {
-  @ViewChild("cajaNum") cajaNum:ElementRef;
+  @ViewChild("cajaNum") cajaNum!:ElementRef;
   
   public resultados: Array<number>;
 
