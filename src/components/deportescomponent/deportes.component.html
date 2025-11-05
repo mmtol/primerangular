@@ -1,0 +1,24 @@
+<div>
+    <h1>Directivas</h1>
+    <h2>Deportes</h2>
+    <h3>Numero de deportes: {{deportes.length}}</h3>
+    <div *ngIf="deportes.length < 5; then condiciontrue;else condicionfalse"></div>
+    <ng-template #condiciontrue>
+        <h3>Hay menos de 5 deportes</h3>
+    </ng-template>
+    <ng-template #condicionfalse>
+        <h3>Hay más de 5 deportes!!!</h3>
+    </ng-template>
+    <p>El primer deporte es {{deportes[0]}}</p>
+    <ul>
+        <li *ngFor="let deporte of deportes; let i = index">
+            index: {{i}}, deporte: {{deporte}}
+        </li>
+    </ul>
+    <h2>Numeros</h2>
+    <ul>
+        <li *ngFor="let num of numeros" [class.par]="num % 2 == 0" [class.impar]="num % 2 != 0">
+            {{num}}
+        </li>
+    </ul>
+</div>
