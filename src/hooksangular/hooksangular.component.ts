@@ -10,9 +10,24 @@ import { Component, OnInit, DoCheck } from "@angular/core";
 
 export class HooksAngular implements OnInit
 {
+    public mensaje:string;
+
     constructor()
     {
         console.log("constructor: primer metodo de inicio del component");
+        this.mensaje = "Hoy es miercoles";
+    }
+
+    cambiarMensaje(): void
+    {
+        if (this.mensaje == "Hoy es miercoles")
+        {
+            this.mensaje = "y mañana jueves";
+        }
+        else
+        {
+            this.mensaje="Hoy es miercoles";
+        }
     }
 
     ngOnInit(): void 
