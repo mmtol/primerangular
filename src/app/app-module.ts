@@ -9,6 +9,7 @@ import { DeportesComponent } from '../components/deportescomponent/deportes.comp
 import { DeportesComponent2 } from '../components/deportescomponentv2/deportesv2.component';
 import { FormComponent } from '../components/formcomponent/form.component';
 import { TestComponent } from '../components/test.component/test.component';
+import { TablamultiplicarComponent } from '../components/tablamultiplicar.component/tablamultiplicar.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { TestComponent } from '../components/test.component/test.component';
     DeportesComponent,
     DeportesComponent2,
     FormComponent,
-    TestComponent
+    TestComponent,
+    TablamultiplicarComponent
   ],
   imports: [
     BrowserModule,
