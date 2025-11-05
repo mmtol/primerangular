@@ -1,0 +1,38 @@
+<div>
+    <h1>Formularios</h1>
+    <!-- un form siempre debe tener un id de angular con la igualdad a ngForm -->
+     <h2>Binding</h2>
+     <form userForm="ngForm" (ngSubmit)="recibirDatos()">
+        <!-- los controles deben tener una etiqueta ngModel apuntando al id angular -->
+         <!-- para indicar el model binding [(ngModel)]="Mi modelo" -->
+          <label>Nombre</label>
+          <input type="text" name="cajaNombre" #cajanombre="ngModel" [(ngModel)]="user.nombre"/>
+          <br/>
+           <label>Apellido</label>
+          <input type="text" name="cajaApellido" #cajaapellido="ngModel" [(ngModel)]="user.apellido"/>
+          <br/>
+           <label>Edad</label>
+          <input type="number" name="cajaEdad" #cajaedad="ngModel" [(ngModel)]="user.edad"/>
+          <br/>
+          <button>Enviar datos</button>
+     </form>
+     <div>
+        <h2>{{mensaje}}</h2>
+        <h3>{{user.nombre}}</h3>
+        <h3>{{user.apellido}}</h3>
+        <h3>{{user.edad}}</h3>
+     </div>
+     <h2>Referencia</h2>
+     <form #sumarForm="ngForm">
+        <label>Num 1</label>
+        <input type="number" name="cajaNum1" #cajaNum1/>
+        <br/>
+        <label>Num 2</label>
+        <input type="number" name="cajaNum2" #cajaNum2/>
+        <br/>
+        <button (click)="sumarNums()">Sumar</button>
+     </form>
+     <div>
+        <h3>{{suma}}</h3>
+     </div>
+</div>

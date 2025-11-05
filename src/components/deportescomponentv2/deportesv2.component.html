@@ -1,0 +1,23 @@
+<div>
+    <h1>Directivas 2</h1>
+    <h2>Numeros 2</h2>
+    <ul>
+        @for (numero of numeros; track numero; let i = $index)
+        {
+            <li>
+                @if (numero % 2 == 0)
+                {
+                    <li class="par">{{numero}}</li>
+                }
+                @else
+                {
+                    <li class="impar">{{numero}}</li>
+                }
+            </li>
+        }
+        @empty
+        {
+            <li>Sin elementos</li>            
+        }
+    </ul>
+</div>
