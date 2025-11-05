@@ -8,6 +8,7 @@ import { HooksAngular } from '../components/hooksangular/hooksangular.component'
 import { DeportesComponent } from '../components/deportescomponent/deportes.component';
 import { DeportesComponent2 } from '../components/deportescomponentv2/deportesv2.component';
 import { FormComponent } from '../components/formcomponent/form.component';
+import { TestComponent } from '../components/test.component/test.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { FormComponent } from '../components/formcomponent/form.component';
     HooksAngular,
     DeportesComponent,
     DeportesComponent2,
-    FormComponent
+    FormComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
