@@ -8,25 +8,22 @@
         <button (click)="multiplicar()">Multiplicar</button>
     </form>
     <div>
-        @if(cajaNum != null)
-        {
-            <table>
-                <thead>
+        <table>
+            <thead>
+                <tr>
+                    <th>Operacion</th>
+                    <th>Resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (resultado of resultados; track resultado; let i = $index)
+                {
                     <tr>
-                        <th>Operacion</th>
-                        <th>Resultado</th>
+                        <td>{{cajaNum.value}} * {{$index+1}} = </td>
+                        <td>{{resultado}}</td>
                     </tr>
-                </thead>
-                <tbody>
-                    @for (resultado of resultados; track resultado; let i = $index)
-                    {
-                        <tr>
-                            <td>{{cajaNum.value}} * {{$index+1}} = </td>
-                            <td>{{resultado}}</td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        }
+                }
+            </tbody>
+        </table>
     </div>
 </div>
